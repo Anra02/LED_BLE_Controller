@@ -30,7 +30,7 @@ public class ToolPicker extends AppCompatActivity {
 
 
     public void loadColorPicker(View view) {
-        Intent intent = new Intent(this, ColorPicker.class);
+        Intent intent = new Intent(this, ColorPickerActivity.class);
         startActivity(intent);
     }
 

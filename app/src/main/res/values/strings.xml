@@ -4,7 +4,16 @@
     <string name="button_send">Send</string>
     <string name="edit_message">Enter a message</string>
     <string name="title_activity_display_message">MyMessage</string>
-    <string name="title_activity_color_picker">ColorPicker</string>
     <string name="title_activity_animation_picker">AnimationPicker</string>
     <string name="title_activity_playlist_controller">PlaylistController</string>
+
+
+    <!-- Color Picker -->
+    <string name="title_activity_color_picker">Color Picker</string>
+    <string name="colorpicker_help_title">Color Picker Help</string>
+    <string name="colorpicker_about_title">Color Picker About</string>
+    <string name="colorpicker_send">Send</string>
+    <string name="colorpicker_rgbformat">R:%1$s G:%2$s B:%3$s</string>
+
+
 </resources>

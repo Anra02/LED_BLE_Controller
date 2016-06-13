@@ -45,7 +45,7 @@
                 android:value=".ToolPicker" />
         </activity>
         <activity
-            android:name=".ColorPicker"
+            android:name=".ColorPickerActivity"
             android:label="@string/title_activity_color_picker"
             android:parentActivityName=".ToolPicker"
             android:theme="@style/AppTheme.NoActionBar">

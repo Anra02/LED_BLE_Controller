@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        >
+        android:weightSum="1">
 
         <!--
            <com.adafruit.bluefruit.le.connect.ui.utils.ColorPicker
@@ -26,18 +26,6 @@
        -->
         <com.larswerkman.holocolorpicker.ColorPicker
             android:id="@+id/colorPicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"/>
-
-        <com.larswerkman.holocolorpicker.SaturationBar
-            android:id="@+id/saturationbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"/>
-
-        <com.larswerkman.holocolorpicker.ValueBar
-            android:id="@+id/valuebar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"/>
@@ -92,7 +80,9 @@
             android:layout_width="217dp"
             android:layout_height="40dp"
             android:id="@+id/ringIDSpinner"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.11"
+            android:spinnerMode="dropdown" />
 
 
     </LinearLayout>

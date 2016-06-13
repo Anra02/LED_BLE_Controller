@@ -37,11 +37,7 @@ public class ColorPickerActivity extends AppCompatActivity implements ColorPicke
         mRgbColorView = findViewById(R.id.rgbColorView);
         mRgbTextView = (TextView) findViewById(R.id.rgbTextView);
 
-        mSaturationBar = (SaturationBar) findViewById(R.id.saturationbar);
-        mValueBar = (ValueBar) findViewById(R.id.valuebar);
         mColorPicker = (ColorPicker) findViewById(R.id.colorPicker);
-        mColorPicker.addSaturationBar(mSaturationBar);
-        mColorPicker.addValueBar(mValueBar);
         mColorPicker.setOnColorChangedListener(this);
 
         String[] ringIDs = new String[] {"1","2","3","4","all"};
@@ -65,6 +61,10 @@ public class ColorPickerActivity extends AppCompatActivity implements ColorPicke
         int b = (color >> 0) & 0xFF;
         String text = String.format(getString(R.string.colorpicker_rgbformat), r, g, b);
         mRgbTextView.setText(text);
+
+    }
+
+    public void sendToBLEDevice(View view) {
 
     }
 

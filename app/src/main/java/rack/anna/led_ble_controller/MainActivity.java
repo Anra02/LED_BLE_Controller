@@ -9,11 +9,22 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattDescriptor;
+import android.bluetooth.BluetoothGattService;
+
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class MainActivity extends AppCompatActivity {
+
+import rack.anna.led_ble_controller.ble.BleDevicesScanner;
+import rack.anna.led_ble_controller.ble.BleManager;
+import rack.anna.led_ble_controller.ble.BleUtils;
+
+public class MainActivity extends AppCompatActivity implements BleManager.BleManagerListener, BleUtils.ResetBluetoothAdapterListener{
 
     public final static String EXTRA_MESSAGE ="rack.anna.led_ble_controller";
 
@@ -100,5 +111,45 @@ public class MainActivity extends AppCompatActivity {
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
+    }
+
+    @Override
+    public void onConnected() {
+
+    }
+
+    @Override
+    public void onConnecting() {
+
+    }
+
+    @Override
+    public void onDisconnected() {
+
+    }
+
+    @Override
+    public void onServicesDiscovered() {
+
+    }
+
+    @Override
+    public void onDataAvailable(BluetoothGattCharacteristic characteristic) {
+
+    }
+
+    @Override
+    public void onDataAvailable(BluetoothGattDescriptor descriptor) {
+
+    }
+
+    @Override
+    public void onReadRemoteRssi(int rssi) {
+
+    }
+
+    @Override
+    public void resetBluetoothCompleted() {
+
     }
 }

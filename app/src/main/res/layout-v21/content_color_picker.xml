@@ -23,9 +23,8 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_gravity="center_horizontal"
-            android:weightSum="1">
+            android:layout_height="46dp"
+            android:layout_gravity="center_horizontal">
 
             <TextView
                 android:layout_width="151dp"
@@ -39,20 +38,25 @@
                 android:layout_centerHorizontal="true" />
 
             <RelativeLayout
-                android:layout_width="180dp"
+                android:layout_width="160dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/spinner_border"
-                android:orientation="horizontal"
-                android:layout_weight="0.02">
+                android:orientation="horizontal">
 
                 <Spinner
                     android:id="@+id/ringIDSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dialog"
+                    android:layout_alignParentTop="true"
                     android:backgroundTintMode="screen"
-                    android:dropDownSelector="#ffffff" />
+                    android:clickable="true"
+                    android:dropDownSelector="#ffffff"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="false" />
 
             </RelativeLayout>
         </LinearLayout>
@@ -75,7 +79,7 @@
                 android:layout_centerHorizontal="true" />
 
             <RelativeLayout
-                android:layout_width="180dp"
+                android:layout_width="160dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/spinner_border"
@@ -86,9 +90,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dialog"
+                    android:layout_alignParentTop="true"
                     android:backgroundTintMode="screen"
-                    android:layout_centerHorizontal="true"
-                    android:dropDownSelector="#ffffff" />
+                    android:clickable="true"
+                    android:dropDownSelector="#ffffff"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="false" />
             </RelativeLayout>
         </LinearLayout>
 

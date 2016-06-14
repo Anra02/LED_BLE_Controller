@@ -16,18 +16,7 @@ public class ToolPicker extends AppCompatActivity {
         setContentView(R.layout.activity_tool_picker);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-
-        TextView textView = new TextView(this);
-        textView.setTextSize(35);
-        textView.setText(message);
-
-        RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
-        layout.addView(textView);
     }
-
 
     public void loadColorPicker(View view) {
         Intent intent = new Intent(this, ColorPickerActivity.class);

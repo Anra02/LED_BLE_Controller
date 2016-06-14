@@ -9,6 +9,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.larswerkman.holocolorpicker.ColorPicker;
+import com.larswerkman.holocolorpicker.OpacityBar;
 import com.larswerkman.holocolorpicker.SaturationBar;
 import com.larswerkman.holocolorpicker.ValueBar;
 
@@ -19,6 +20,7 @@ public class ColorPickerActivity extends AppCompatActivity implements ColorPicke
     private ColorPicker mColorPicker;
     private SaturationBar mSaturationBar;
     private ValueBar mValueBar;
+   // private OpacityBar mOpacityBar;
     private View mRgbColorView;
     private TextView mRgbTextView;
 
@@ -37,14 +39,24 @@ public class ColorPickerActivity extends AppCompatActivity implements ColorPicke
         mRgbColorView = findViewById(R.id.rgbColorView);
         mRgbTextView = (TextView) findViewById(R.id.rgbTextView);
 
+        mSaturationBar = (SaturationBar) findViewById(R.id.saturationbar);
+        mValueBar = (ValueBar) findViewById(R.id.valuebar);
         mColorPicker = (ColorPicker) findViewById(R.id.colorPicker);
+
+        mColorPicker.addSaturationBar(mSaturationBar);
+        mColorPicker.addValueBar(mValueBar);
         mColorPicker.setOnColorChangedListener(this);
 
-        String[] ringIDs = new String[] {"1","2","3","4","all"};
-
+        String[] ringIDs = new String[] {"choose ringID","1","2","3","4","all"};
         Spinner ringSpinner = (Spinner) findViewById(R.id.ringIDSpinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, ringIDs);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.spinner_item, ringIDs);
         ringSpinner.setAdapter(adapter);
+
+
+        String[] ledIDs = new String[] {"choose pattern","2","3","4","all"};
+        Spinner ledPatternSpinner = (Spinner) findViewById(R.id.ledPatternSpinner);
+        ArrayAdapter<String> tempAdapter= new ArrayAdapter<>(this,R.layout.spinner_item, ledIDs);
+        ledPatternSpinner.setAdapter(tempAdapter);
 
     }
 
